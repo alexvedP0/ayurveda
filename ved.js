@@ -7,7 +7,7 @@ const whatsappUrl = (message = "Hello Shri Ayurveda, I would like to know more."
   `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
 const pages = [
-  ["home", "Home", "ved.html"],
+  ["home", "Home", "index.html"],
   ["conditions", "Conditions", "conditions.html"],
   ["treatment", "Treatment", "treatment.html"],
   ["products", "Products", "products.html"],
@@ -23,7 +23,7 @@ const navigation = pages.map(([key, label, href]) =>
 document.querySelector("#site-header").innerHTML = `
   <header class="site-header">
     <div class="header-inner container">
-      <a class="brand" href="ved.html" aria-label="Shri Ayurveda home">
+      <a class="brand" href="index.html" aria-label="Shri Ayurveda home">
         <img src="image%20folder/logo-hd-2048.png" alt="Shri Ayurveda Wellness Solution logo">
         <span class="brand-copy"><strong>Shri Ayurveda</strong><small>Wellness Solution</small></span>
       </a>
@@ -39,12 +39,12 @@ document.querySelector("#site-footer").innerHTML = `
   <footer class="site-footer">
     <div class="container">
       <div class="footer-main">
-        <a class="brand footer-brand" href="ved.html" aria-label="Shri Ayurveda home"><img src="image%20folder/logo-hd-2048.png" alt=""><span class="brand-copy"><strong>Shri Ayurveda</strong><small>Wellness Solution</small></span></a>
+        <a class="brand footer-brand" href="index.html" aria-label="Shri Ayurveda home"><img src="image%20folder/logo-hd-2048.png" alt=""><span class="brand-copy"><strong>Shri Ayurveda</strong><small>Wellness Solution</small></span></a>
         <p>Ayurvedic care and guidance for sensitive health concerns, with respect at every step.</p>
         <nav class="footer-links" aria-label="Footer navigation">${pages.slice(1).map(([, label, href]) => `<a href="${href}">${label}</a>`).join("")}</nav>
       </div>
       <div class="footer-disclaimer"><strong>Important note</strong><p>The information on this website is for general awareness only and is not a substitute for a medical examination. Please consult a qualified practitioner before starting any treatment. Results may vary from person to person.</p><p class="image-attribution">Illustrative photos: <a href="https://commons.wikimedia.org/wiki/File:Darjeeling,_India,_Indian_spices,_seeds_and_nuts.jpg" target="_blank" rel="noopener noreferrer">Vyacheslav Argenberg</a> (CC BY 4.0) and <a href="https://commons.wikimedia.org/wiki/File:Making_herbal_oil_a_pain_remedy.jpg" target="_blank" rel="noopener noreferrer">Mnv179</a> (CC BY-SA 4.0).</p></div>
-      <div class="footer-bottom"><span>© <span id="copyright-year">${new Date().getFullYear()}</span> Shri Ayurveda. All rights reserved.</span><a href="ved.html">Back to home ↑</a></div>
+      <div class="footer-bottom"><span>© <span id="copyright-year">${new Date().getFullYear()}</span> Shri Ayurveda. All rights reserved.</span><a href="index.html">Back to home ↑</a></div>
     </div>
   </footer>`;
 
